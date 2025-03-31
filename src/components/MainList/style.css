@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+.main-list {
+  @apply flex flex-col items-center
+}
+
+.main-list__item {
+  @apply border-2 border-gray-400 p-2 
+}
+
+
+
+.item__title{
+  @apply before:content-['Nome:'] before:font-bold before:pr-2 text-gray-700 before:text-black
+}
+.item__desc {
+  @apply before:content-['Descrição:'] before:font-bold before:pr-2  flex flex-col  text-gray-700 before:text-black my-4
+}
+
+.item__buttons {
+  @apply flex gap-2
+}
+
+
+.main-list__no-items {
+  @apply my-24 text-3xl text-center font-bold
+}
+
+.main-list-form {
+  @apply border-1 border-gray-400 my-4
+}
+
+.main-list-form > form {
+  @apply px-2
+}
+
+.main-list-form__header {
+  @apply flex justify-between items-center bg-gray-800
+}
+
+.main-list-form__header > h5 {
+  @apply font-bold text-xl text-white p-2
+}
+
+.main-list-form__header svg {
+  @apply text-4xl fill-white hover:fill-gray-100 cursor-pointer
+}
