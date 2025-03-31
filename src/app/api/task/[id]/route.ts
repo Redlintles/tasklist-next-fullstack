@@ -1,6 +1,9 @@
 import Task from "@/models/Task";
 
-export async function GET(_: Request, { params }: { params: { id: string } }) {
+export async function GET(
+  _: Request,
+  { params }: { params: Promise<{ id: string }> }
+) {
   const { id } = await params;
 
   const t = await Task.findByPk(id);
@@ -17,7 +20,7 @@ export async function GET(_: Request, { params }: { params: { id: string } }) {
 
 export async function DELETE(
   _: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
 
@@ -40,7 +43,7 @@ export async function DELETE(
 
 export async function PATCH(
   req: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
 

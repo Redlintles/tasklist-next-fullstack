@@ -1,5 +1,5 @@
 {
+  "/api/task/[id]/route": "app/api/task/[id]/route.js",
   "/api/task/route": "app/api/task/route.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"
 }
